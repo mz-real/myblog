@@ -1,0 +1,16 @@
+<div class='container bg-[blue]'>
+  <p class="text-[green]"><%= notice %></p>
+
+  <h1>Posts</h1>
+
+  <div id="posts" class="container flex">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p class="text-[yellow] text-[20px]">
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
+  </div>
+
+  <%= link_to "New post", new_post_path %>
+</div>
